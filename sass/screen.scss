@@ -1,0 +1,187 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/tables/alternating-rows-and-columns";
+
+$noise: url("../images/noise.png");
+$body-bg-color: #3D4C53;
+$body-bg: $noise, radial-gradient(50% 300px, circle closest-side, lighten($body-bg-color, 10%) 100px, darken($body-bg-color, 10%) 800px) fixed;
+$banner-color: #70B7BA;
+$banner-bg: $noise, linear-gradient(lighten($banner-color, 10%), darken($banner-color, 10%));
+//$banner-title-color: saturate(invert($banner-color), 60%);
+$banner-title-color: desaturate(#FFFF00, 10%);
+$tabpage-color: #F0F0F0;
+$tabpage-bg: $noise, $tabpage-color;
+$tab-bg: linear-gradient(darken($tabpage-color, 20%), darken($tabpage-color, 15%) 70%, $tabpage-color);
+$tab-bg-active: linear-gradient(darken($tabpage-color, 10%), darken($tabpage-color, 5%) 70%, $tabpage-color);
+$table-color1: #E7E1D4;
+$table-color2: lighten($table-color1, 9%);
+
+$title-color: #F1433F;
+$text-color: #0F0F0F;
+//$double-line-color: $banner-color;
+$double-line-color: #D0D0D0;
+
+html {
+	min-height: 100%;
+}
+body {
+	margin: 0px;
+	font-family: Arial;
+	@include background($body-bg);
+	color: $text-color;
+}
+
+#container {
+	background-color: white;
+	position: relative;
+	margin: 50px auto;
+	padding:10px;
+	width: 800px;
+    @include border-radius(5px);
+}
+
+#header {
+	background-color: white;
+	width: 100%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+    a {
+      color:#000000;
+      text-decoration:none;
+    }
+}
+
+#banner {
+    @include background($banner-bg);
+    @include border-radius(5px);
+	padding: 50px 30px 50px 30px;
+	text-align: center;
+    h1 {
+        font-size:26px;
+		color: $banner-title-color;
+		@include text-shadow(#333333 2px 2px 1px);
+    }
+}
+
+#menu {
+	height: 30px;
+	margin-top: 10px;
+    ul {
+        margin:0;
+        padding:0;
+        position: relative;
+        float:left;
+    }
+    li {
+        list-style:none;
+        margin: 0px 5px 0px 0px;
+        position: relative;
+        float:left;
+    }
+    a {
+        @include border-top-radius(5px);
+        border: 0px;
+        float:left;
+        height:20px;
+        padding:5px 20px 5px;
+        color:#000000;
+        font-size:15px;
+        font-weight:bold;
+        text-decoration:none;
+
+        @include background($tab-bg);
+		@include box-shadow(gray 2px 0px 1px);
+
+        &:hover, &.active{
+            @include background($tab-bg-active);
+        }
+    }
+}
+
+#content {
+	position: relative;
+	width:100%;
+	font-size:16px;
+	line-height: 1.75em;
+	h1, h2 { color: $title-color; }
+    h1 {
+        font-size:24px;
+        font-weight:bold;
+        margin: 20px 0px 10px 10px;
+        position: relative;
+        left: -20px;
+    }
+    h2 {
+        font-size:18px;
+        font-weight:bold;
+        margin: 20px 0px 5px 10px;
+        position: relative;
+        left: -10px;
+    }
+	border-bottom: 6px double $double-line-color;
+}
+
+div.tabpage {
+	clear: left;
+	padding: 10px;
+	@include background($tabpage-bg);
+	position: relative;
+	min-height: 400px;
+	padding-left: 40px;
+	padding-right: 40px;
+    &.inactive {
+        display: none;
+    }
+}
+
+#footer {
+	text-align: center;
+	color:#000000;
+	font-size:12px;
+	width: 100%;
+	clear: both !important;
+	position: relative;
+	padding: 5px;
+    a {
+        color:#000000;
+        text-decoration:none;
+    }
+}
+
+
+div.news_clip{
+	margin: 30px 0px 30px 0px;
+	padding: 10px;
+    @include single-transition(background, 0.3s, ease-in-out);
+    &:hover{
+        background: #fff;
+        @include border-radius(5px);
+    }
+    .date{
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 5px;
+    }
+}
+
+table{
+	margin-left: 2em;
+    td.temp{
+        color: #f00;
+    }
+    th {
+        margin-left: 2em;
+		font-weight: bold;
+    }
+    th, td {
+        text-align: left;
+        vertical-align: middle;
+        padding: 2px 16px;
+    }
+	th { background: $table-color1; }
+	tr:nth-child(odd) { background: $table-color2; }
+	tr:nth-child(even) { background: $table-color1; }
+
+}
+
