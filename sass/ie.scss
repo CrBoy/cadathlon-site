@@ -3,3 +3,32 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+
+@import "compass/css3";
+
+$noise: url("../images/noise.png");
+$body-bg-color: #3D4C53;
+$body-bg: $noise, $body-bg-color;
+$banner-color: #70B7BA;
+$banner-bg: $noise, $banner-color;
+$tab-bg: darken($tabpage-color, 20%);
+$tab-bg-active: darken($tabpage-color, 10%);
+
+body {
+	@include background($body-bg);
+}
+
+#banner {
+    @include background($banner-bg);
+}
+
+#menu {
+    a {
+        @include background($tab-bg);
+
+        &:hover, &.active{
+            @include background($tab-bg-active);
+        }
+    }
+}
+
