@@ -1,0 +1,12 @@
+<Files .git>
+deny from all
+</Files>
+
+<Files sass>
+deny from all
+</Files>
+
+<Files config.rb>
+deny from all
+</Files>
+
