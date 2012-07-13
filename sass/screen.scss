@@ -129,6 +129,9 @@ div.tabpage {
 	min-height: 400px;
 	padding-left: 40px;
 	padding-right: 40px;
+	ul { list-style: disc; }
+	ol { list-style: decimal; }
+	ul, ol{ margin-left: 2em; }
     &.inactive {
         display: none;
     }
