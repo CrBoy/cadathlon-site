@@ -1,0 +1,50 @@
+#page{
+	margin: 0 auto;
+	width: 21cm;
+	height: 29.7cm;
+	border: 1px solid;
+	box-shadow: 4px 4px gray;
+}
+#content{
+	margin: 1.5cm auto;
+	width: 18cm;
+	border: none;
+}
+h1{
+	text-align: center;
+	font-size: 120%;
+	margin: 0.3cm 0;
+}
+table{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+tr{
+	height: 1.2cm;
+}
+td{
+	border: 1px solid black;
+	margin: 0;
+	padding: 0.3cm;
+}
+td.nested_table{
+	padding: 0;
+}
+table.inner_table{
+	border-style: hidden;
+}
+.multi_line{
+	height: 5cm;
+	vertical-align: top;
+}
+.sign{
+	height: 1.6cm;
+}
+ul{
+	list-style: disc;
+	padding-left: 2em;
+}

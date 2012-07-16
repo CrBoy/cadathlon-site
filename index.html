@@ -23,6 +23,23 @@
   })();
 </script>
 
+<script type="text/javascript" charset="utf-8">
+	function print_iframe(id)
+	{
+	    var iframe = document.frames ? document.frames[id] : document.getElementById(id);
+	    var ifWin = iframe.contentWindow || iframe;
+	    iframe.focus();
+	    ifWin.print_page();
+	    return false;
+	}
+</script>
+<style type="text/css" media="screen">
+	a.click_text:hover{
+		cursor:pointer;
+		cursor:hand;
+	}
+</style>
+
 </head>
 
 <body>
@@ -51,6 +68,11 @@
 <h1>最新消息</h1>
 
 <div class="news_clip">
+	<div class="date">2012 年 07 月 16 日</div>
+	<a href="#register">報名資訊</a>已更新，即日起開始收件。
+</div>
+
+<div class="news_clip">
 	<div class="date">2012 年 04 月 30 日</div>
 	網站上線。開放報名時間將另行公佈！
 </div>
@@ -62,18 +84,27 @@
 <h1>報名資訊</h1>
 
 <h2>報名資格</h2>
-<ol>
+<ul>
 <li>大學校院學生對積體電路電腦輔助設計軟體製作有興趣者，得在老師指導下，組隊報名參賽。</li>
 <li>本競賽由研究所及大學部學生不分組進行之。</li>
 <li>參賽學生必須為全時間在學學生，不得在公司、研究單位或大學校院任職。</li>
-</ol>
-
-<h2>報名方式</h2>
-<ol>
 <li>參賽隊伍由指導老師一至二位、學生一至二位組成（可跨系跨校）。</li>
 <li>每位指導老師可推薦隊伍數不限，但每位學生僅能報名參加一隊。</li>
 <li>報名截止後，不得以任何理由要求變更參賽成員或指導老師。</li>
-</ol>
+</ul>
+
+<h2>繳交報名資料</h2>
+<ul>
+<li>報名表 - 請填寫下方之報名資料</li>
+<li>所有參賽學生之大學（含）以上所有在校相關修課成績單</li>
+<li>所有參賽學生之學生證正反面影本（新生請檢附報到通知單或相關證明文件影本）</li>
+</ul>
+以上資料請於民國 101 年 8 月 1 日（含）以限時掛號郵寄至報名地址（701 台南市大學路1號 國立成功大學資訊工程系 何宗易老師收），以郵戳為憑，逾期不予受理。
+
+<h2>報名資料填寫</h2>
+請在填寫完畢後送出，再按下後方之「列印表格」進行列印，並簽名後郵寄。建議使用 Firefox 或 Chrome 進行列印，否則可能有版面錯誤問題。
+<iframe id="form_print" name="form_print" src="registration/form.html" width="100%" height="300px"></iframe>
+<div style="text-align: right;">表格產生後請<a class="click_text" onclick="print_iframe('form_print');">列印表格</a></div>
 
 </div>
 

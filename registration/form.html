@@ -1,0 +1,85 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Table</title>
+	<link href="reset.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="reset.css" media="print" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="utf-8">
+		function print_page(){ print(); }
+	</script>
+	<style type="text/css" media="screen">
+		div{
+			margin: 16px 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		
+	<form action="signup.php" method="post" accept-charset="utf-8">
+
+		<div>
+<label for="team_name">隊名：</label>
+<input type="text" id="team_name" name="team_name" size="32"/>
+		</div>
+		<div>
+<label for="student1_name">學生一：</label>
+<input type="text" id="student1_name" name="student1_name" size="10" />
+<label for="student1_school">學校：</label>
+<input type="text" id="student1_school" name="student1_school" size="16" />
+<label for="student1_grade">年級：</label>
+<input type="text" id="student1_grade" name="student1_grade" size="6" />
+<br>
+<label for="student1_email">E-mail：</label>
+<input type="text" id="student1_email" name="student1_email" size="24" />
+<label for="student1_phone">連絡電話：</label>
+<input type="text" id="student1_phone" name="student1_phone" size="10" />
+<br>
+<label for="student1_address">通訊地址：</label>
+<input type="text" id="student1_address" name="student1_address" size="48" />
+		</div>
+		<div>
+<label for="student2_name">學生二：</label>
+<input type="text" id="student2_name" name="student2_name" size="10" />
+<label for="student2_school">學校：</label>
+<input type="text" id="student2_school" name="student2_school" size="16" />
+<label for="student2_grade">年級：</label>
+<input type="text" id="student2_grade" name="student2_grade" size="6" />
+<br>
+<label for="student2_email">E-mail：</label>
+<input type="text" id="student2_email" name="student2_email" size="24" />
+<label for="student2_phone">連絡電話：</label>
+<input type="text" id="student2_phone" name="student2_phone" size="10" />
+<br>
+<label for="student2_address">通訊地址：</label>
+<input type="text" id="student2_address" name="student2_address" size="48" />
+		</div>
+		<div>
+<label for="advisor1_name">指導老師：</label>
+<input type="text" id="advisor1_name" name="advisor1_name" size="10" />
+<label for="advisor1_school">學校：</label>
+<input type="text" id="advisor1_school" name="advisor1_school" size="16" />
+		</div>
+		<div>
+<label for="advisor2_name">指導老師：
+<input type="text" id="advisor2_name" name="advisor2_name" size="10" />
+<label for="advisor2_school">學校：</label>
+<input type="text" id="advisor2_school" name="advisor2_school" size="16" />
+		</div>
+		<div>
+<label for="record">相關競賽紀錄：</label><br>
+<textarea id="record" name="record" rows="8" cols="80"></textarea>
+		</div>
+		<div>
+<label for="paper">論文著述：</label><br>
+<textarea id="paper" name="paper" rows="8" cols="80"></textarea>
+		</div>
+		<div>
+
+<input type="submit" name="submit" value="送出">
+		</div>
+	</form>
+	</div>
+</body>
+</html>
