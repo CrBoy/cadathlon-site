@@ -48,55 +48,55 @@ body {
 	position: relative;
 	top: 0px;
 	left: 0px;
-    a {
-      color:#000000;
-      text-decoration:none;
-    }
+	a {
+		color:#000000;
+		text-decoration:none;
+	}
 }
 
 #banner {
-    @include background($banner-bg);
+	@include background($banner-bg);
 	padding: 0.5em 0.5em;
 	text-align: center;
-    h1 {
-        font-size:1.6em;
+	h1 {
+		font-size:1.6em;
 		color: $banner-title-color;
 		@include text-shadow(#333333 2px 2px 1px);
-    }
+	}
 }
 
 #menu {
 	margin-top: 0;
-    ul {
-        margin:0 auto;
-        padding:0;
+	ul {
+		margin:0 auto;
+		padding:0;
 		text-align: center;
-    }
-    li {
+	}
+	li {
 		display: inline-block;
 		margin: 0 auto;
-        position: relative;
+		position: relative;
 		text-align: center;
-    }
-    a {
+	}
+	a {
 		display: inline-block;
-        border: 0px;
+		border: 0px;
 		width: 2.4em;
 		margin: 0 auto;
-        padding: 0.5em 0.5em;
-        color:#000000;
-        font-size:1.2em;
-        font-weight:bold;
-        text-decoration:none;
+		padding: 0.5em 0.5em;
+		color:#000000;
+		font-size:1.2em;
+		font-weight:bold;
+		text-decoration:none;
 
 		@include background($tab-bg);
 		@include box-shadow(gray 2px 0px 1px);
 		@include border-radius(5px);
 
-        &:hover, &.active{
-            @include background($tab-bg-active);
-        }
-    }
+		&:hover, &.active{
+			@include background($tab-bg-active);
+		}
+	}
 }
 
 #content {
@@ -105,18 +105,18 @@ body {
 	font-size: 1em;
 	line-height: 1.5em;
 	h1, h2 { color: $title-color; }
-    h1 {
-        font-size:1.5em;
-        font-weight:bold;
-        margin: 1em 0 0.5em ;
-        position: relative;
-    }
-    h2 {
-        font-size:18px;
-        font-weight:bold;
-        margin: 1em 0 0.5em;
-        position: relative;
-    }
+	h1 {
+		font-size:1.5em;
+		font-weight:bold;
+		margin: 1em 0 0.5em ;
+		position: relative;
+	}
+	h2 {
+		font-size:18px;
+		font-weight:bold;
+		margin: 1em 0 0.5em;
+		position: relative;
+	}
 	img {
 		max-width: 100%;
 	}
@@ -132,9 +132,9 @@ div.tabpage {
 	ul { list-style: disc; }
 	ol { list-style: decimal; }
 	ul, ol{ margin-left: 2em; }
-    &.inactive {
-        display: none;
-    }
+	&.inactive {
+		display: none;
+	}
 	a {
 		font-weight: bold;
 		text-decoration: none;
@@ -151,38 +151,38 @@ div.tabpage {
 	width: 100%;
 	clear: both !important;
 	position: relative;
-    a {
-        color:#000000;
-        text-decoration:none;
-    }
+	a {
+		color:#000000;
+		text-decoration:none;
+	}
 }
 
 
 div.news_clip{
 	margin: 30px 0 10px 0;
-    @include single-transition(background, 0.3s, ease-in-out);
-    &:hover{
-        background: #fff;
-    }
-    .date{
-        font-weight: bold;
-        //text-decoration: underline;
-        margin-bottom: 5px;
-    }
+	@include single-transition(background, 0.3s, ease-in-out);
+	&:hover{
+		background: #fff;
+	}
+	.date{
+		font-weight: bold;
+		//text-decoration: underline;
+		margin-bottom: 5px;
+	}
 }
 
 table{
-    td.temp{
-        color: #f00;
-    }
-    th {
+	td.temp{
+		color: #f00;
+	}
+	th {
 		font-weight: bold;
-    }
-    th, td {
-        text-align: left;
-        vertical-align: middle;
-        padding: 2px 1em;
-    }
+	}
+	th, td {
+		text-align: left;
+		vertical-align: middle;
+		padding: 2px 1em;
+	}
 	th { background: $table-color1; }
 	tr:nth-child(odd) { background: $table-color2; }
 	tr:nth-child(even) { background: $table-color1; }
