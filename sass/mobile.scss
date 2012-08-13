@@ -172,6 +172,7 @@ div.news_clip{
 }
 
 table{
+    width: 100%;
 	td.temp{
 		color: #f00;
 	}
@@ -187,6 +188,15 @@ table{
 	tr:nth-child(odd) { background: $table-color2; }
 	tr:nth-child(even) { background: $table-color1; }
 
+    &#result1 {
+        font-size: 0.8em;
+        tr:first-child {
+            font-weight: bold;
+        }
+        .school {
+            display: none;
+        }
+    }
 }
 
 #form_print {
